@@ -1,0 +1,12 @@
+Installation
+To install unpack zip file to temp directory and then run project. 
+Then add Stimulsoft.Report.dll, Stimulsoft.Controls.dll, Stimulsoft.Base.dll 
+and Stimulsoft.Editor.dll to references of this project. Compile project. Copy compiled dll 
+to bin directory. At start of your program add following code:
+
+StiConfig.Services.Add(new Stimulsoft.Report.Dictionary.StiSqlCeAdapterService());
+StiConfig.Services.Add(new Stimulsoft.Report.Dictionary.StiSqlCeDatabase());
+
+To attach the file to the Designer.exe just put the file assembly into the same
+directory where the Designer.exe is located. Besides you should provide access 
+to the assembly of the provider of the database.
